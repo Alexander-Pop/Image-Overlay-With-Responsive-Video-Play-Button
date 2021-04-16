@@ -1,0 +1,55 @@
+body {
+      margin: 0 10px;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+    h1 {
+      font-size: 18px;
+    }
+    /* Just a parent container for the videos */
+    .videos {
+      margin: 20px auto;
+      max-width: 700px;
+    }
+    /* Individual video container */
+    .video-wrap {
+      position: relative;
+      max-width: 700px;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+    /* video poster frame or placeholder image */
+    .video-wrap .placeholder {
+      max-width: 700px;
+      width: 100%;
+    }
+    /* SVG play button container */
+    .video-wrap .play-btn {
+      position: absolute;
+      max-width: 100%;
+      width: 15%;
+      height: 27%;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      padding: 20% 42%;
+      background-color: rgba(0,0,0,0.5);
+    }
+    .video-wrap .play-btn svg {
+      transition: all .2s ease;
+      fill: #777;
+    }
+    .video-wrap .play-btn:hover {
+      background-color: rgba(0,0,0,0.3);
+    }
+    .video-wrap .play-btn:hover svg,
+    .video-wrap .play-btn:focus svg {
+      cursor: pointer;
+      fill: #FFF;
+    }
+    /* adjust your icon size, add different breakpoints as needed */
+    @media screen and (max-width: 600px) {
+      .video-wrap .play-btn {
+        width: 70px;
+        height: 70px;
+      }
+    }
